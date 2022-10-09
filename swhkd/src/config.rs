@@ -226,6 +226,7 @@ pub struct Hotkey {
 pub enum Modifier {
     Super,
     Alt,
+    AltGr,
     Control,
     Shift,
     Any,
@@ -443,6 +444,7 @@ pub fn parse_contents(path: PathBuf, contents: String) -> Result<Vec<Mode>, Erro
         ("mod4", Modifier::Super),
         ("alt", Modifier::Alt),
         ("mod1", Modifier::Alt),
+        ("mod5", Modifier::AltGr),
         ("shift", Modifier::Shift),
         ("any", Modifier::Any),
     ]);
